@@ -15,9 +15,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { ProductService } from './services/product.service';
 import { CustomerService } from './services/customer.service';
+import { AddPrComponent } from './product/add-pr/add-pr.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { CustomerService } from './services/customer.service';
     ProductComponent,
     ShowPrComponent,
     CustomerComponent,
-    ShowCustComponent
+    ShowCustComponent,
+    AddPrComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +38,11 @@ import { CustomerService } from './services/customer.service';
     MatTableModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [ProductService,CustomerService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddPrComponent]
 })
 export class AppModule { }
