@@ -16,6 +16,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {FormsModule} from '@angular/forms';
 
 import { ProductService } from './services/product.service';
 import { CustomerService } from './services/customer.service';
@@ -39,7 +40,8 @@ import { AddPrComponent } from './product/add-pr/add-pr.component';
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [ProductService,CustomerService],
   bootstrap: [AppComponent],

@@ -11,7 +11,13 @@ import {AddPrComponent} from 'src/app/product/add-pr/add-pr.component';
 export class ShowPrComponent implements OnInit {
 
   constructor(private service: ProductService,
-    private dialog:MatDialog) { }
+    private dialog:MatDialog) { 
+      this.service.listen().subscribe((m:any) =>{
+        console.log(m);
+        this.refreshPrList();
+      })
+    }
+
   listData: MatTableDataSource<any>;
   displayedColumns: string[] = ['Options', 'ID', 'Name','Description'];
   ngOnInit(): void {
